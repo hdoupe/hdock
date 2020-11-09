@@ -56,7 +56,7 @@ var runCmd = &cobra.Command{
 				dirname = strings.ToLower(pieces[len(pieces)-1])
 			}
 			tag = dirname + ":latest"
-		} else if strings.Contains(tag, ":") {
+		} else if !strings.Contains(tag, ":") {
 			tag = tag + ":latest"
 		}
 
